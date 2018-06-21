@@ -1,0 +1,40 @@
+.container {
+  margin: 20px;
+  padding: 10px 20px;
+}
+
+p {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 2;
+}
+
+.wrapper {
+  margin: 0 auto;
+  display: block;
+}
+
+.highlighted-text {
+  color: #42aaf4;
+}
+
+.text-color:hover {
+  color: #e20d22;
+}
+
+.mejs__controls{
+	background: #42aaf4 !important;
+}
+
+@media (min-width: 1028px) {
+
+  .wrapper {
+    width: 1028px;
+  }
+  .container {
+    display: block;
+    margin: 0 auto;
+    width: 1028px;
+  }
+}
