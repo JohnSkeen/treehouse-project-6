@@ -15,16 +15,28 @@ p {
   display: block;
 }
 
-.highlighted-text {
-  color: #42aaf4;
-}
-
 .text-color:hover {
-  color: #e20d22;
+  color: #f45442;
 }
 
-.mejs__controls{
+.mejs__controls {
 	background: #42aaf4 !important;
+}
+
+.mejs__time-current {
+  background: linear-gradient(to right, #f4ad42, #f45442);
+}
+
+@media (min-width: 768px) {
+
+  .wrapper {
+    width: 90%;
+  }
+  .container {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+  }
 }
 
 @media (min-width: 1028px) {

@@ -3,23 +3,25 @@ $('video').mediaelementplayer({
        strectching: 'auto'
      });
 
-let myVideo = document.getElementById('myVideo');
-let text = document.querySelectorAll('.text-color');
+let video = document.getElementById('video');
+let text = document.querySelectorAll('span');
 let textSelect = document.getElementById('textSelect');
 
-myVideo.addEventListener("timeupdate", () => {
+// Highlighting Text
+video.addEventListener("timeupdate", () => {
  for (let i = 0; i < text.length; i++){
-   if(myVideo.currentTime > text[i].getAttribute('data-start') && myVideo.currentTime <= text[i].getAttribute('data-end')){
-     text[i].classList.add("highlighted-text");
+   if(video.currentTime > text[i].getAttribute('data-start') && video.currentTime <= text[i].getAttribute('data-end')){
+     text[i].style.color = '#42aaf4';
    } else {
-     text[i].classList.remove("highlighted-text");
+     text[i].style.color = '#000';
    }
  }
 });
 
+// Clicked Text Jump on Video
 textSelect.addEventListener('click',(e) => {
  if (e.target.tagName == ('SPAN')){
-   myVideo.currentTime = +e.target.getAttribute('data-start');
-   myVideo.play();
+   video.currentTime = +e.target.getAttribute('data-start');
+   video.play();
  }
 });
